@@ -1,6 +1,5 @@
 import {Router} from "express"
 import * as TryController from "../controllers/TryController"
-
 export class TryRouter {
   public readonly router: Router
   constructor() {

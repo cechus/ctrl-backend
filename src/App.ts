@@ -6,7 +6,6 @@ import {MainRouter} from "./routes/MainRoutes"
 import {ServerError} from "./ServerError"
 
 const app = express()
-
 app.disable("x-powered-by")
 app.set("port", ENV.get("PORT") || 5000)
 
@@ -43,6 +42,11 @@ function errorHandler(
   }
   if (!err.code) {
     err.code = "unexpected_error"
+  }
+  if (err.status === 500) {
+    console.error("=============ERROR=============")
+    console.error(err)
+    console.error("=============/ERROR=============")
   }
   res.status(err.status)
   const response = {

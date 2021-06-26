@@ -13,7 +13,7 @@
   "rules": {
     "quotes": ["error", "double"],
     "comma-dangle": ["error", "always-multiline"],
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": 0,
     "object-curly-spacing": ["error", "never"],
     "no-unused-vars": "warn"
   }
